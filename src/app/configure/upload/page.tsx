@@ -31,7 +31,6 @@ const Page = () => {
         })
 
     const onDropRejected = (rejectedFiles: FileRejection[]) => {
-        console.log('rejected');
         const [file] = rejectedFiles;
         setIsDragOver(false);
         toast({
