@@ -21,8 +21,6 @@ export const createCheckoutSession = async ({ configId }: { configId: string }) 
     if (!user) {
         throw new Error("You need to be logged in");
     }
-    // check if user is in db and add
-    console.log(user.id, user.email);
 
     const { finish, material } = configuration;
 
@@ -73,5 +71,4 @@ export const createCheckoutSession = async ({ configId }: { configId: string }) 
     });
 
     return { url: stripeSession.url };
-
 }

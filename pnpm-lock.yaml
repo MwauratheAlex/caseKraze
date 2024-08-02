@@ -20,9 +20,12 @@ importers:
       '@radix-ui/react-aspect-ratio':
         specifier: ^1.1.0
         version: 1.1.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+<<<<<<< HEAD
       '@radix-ui/react-dialog':
         specifier: ^1.1.1
         version: 1.1.1(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+=======
+>>>>>>> saved_and_lost
       '@radix-ui/react-dropdown-menu':
         specifier: ^2.1.1
         version: 2.1.1(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -86,9 +89,12 @@ importers:
       sharp:
         specifier: ^0.32.6
         version: 0.32.6
+<<<<<<< HEAD
       stripe:
         specifier: ^16.6.0
         version: 16.6.0
+=======
+>>>>>>> saved_and_lost
       tailwind-merge:
         specifier: ^2.4.0
         version: 2.4.0
@@ -968,6 +974,7 @@ packages:
       '@types/react':
         optional: true
 
+<<<<<<< HEAD
   '@radix-ui/react-dialog@1.1.1':
     resolution: {integrity: sha512-zysS+iU4YP3STKNS6USvFVqI4qqx8EpiwmT5TuCApVEBca+eRCbONi4EgzfNSuVnOXvC5UPHHMjs8RXO6DH9Bg==}
     peerDependencies:
@@ -981,6 +988,8 @@ packages:
       '@types/react-dom':
         optional: true
 
+=======
+>>>>>>> saved_and_lost
   '@radix-ui/react-direction@1.1.0':
     resolution: {integrity: sha512-BUuBvgThEiAXh2DWu93XsT+a3aWrGqolGlqqw5VU1kG7p/ZH2cuDlM1sRLNnY3QcBS69UIz2mcKhMxDsdewhjg==}
     peerDependencies:
@@ -4208,6 +4217,7 @@ snapshots:
     optionalDependencies:
       '@types/react': 18.3.3
 
+<<<<<<< HEAD
   '@radix-ui/react-dialog@1.1.1(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@radix-ui/primitive': 1.1.0
@@ -4230,6 +4240,8 @@ snapshots:
       '@types/react': 18.3.3
       '@types/react-dom': 18.3.0
 
+=======
+>>>>>>> saved_and_lost
   '@radix-ui/react-direction@1.1.0(@types/react@18.3.3)(react@18.3.1)':
     dependencies:
       react: 18.3.1
