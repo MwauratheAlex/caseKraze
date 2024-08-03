@@ -52,7 +52,7 @@ const OrderReceivedEmail = ({ shippingAddress, orderId, orderDate }: {
                     <Hr style={global.hr} />
 
                     <Section style={global.defaultPadding}>
-                        <Row style={{ display: "inline-flex", marginBottom: 40 }}>
+                        <Row style={{ display: "inline-flex", marginBottom: 40, flexDirection: "column" }}>
                             <Column style={{ width: 170 }}>
                                 <Text style={global.paragraphWithBold}>Order Number</Text>
                                 <Text style={track.number}>{orderId}</Text>
