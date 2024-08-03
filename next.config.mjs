@@ -9,7 +9,7 @@ const nextConfig = {
       "headers": [
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "https://case.mbumwa.com"
+          "value": "https://case.mbumwa.com/"
         },
         {
           "key": "Access-Control-Allow-Methods",
