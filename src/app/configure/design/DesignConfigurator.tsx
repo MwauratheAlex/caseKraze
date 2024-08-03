@@ -37,7 +37,7 @@ const DesignConfigurator = ({
   const { toast } = useToast();
   const router = useRouter();
 
-  const { mutate: saveConfig } = useMutation({
+  const { mutate: saveConfig, isPending } = useMutation({
     mutationKey: ["save-config"],
     mutationFn: async (args: SaveConfigArgs) => {
       await Promise.all([saveConfiguration(), _saveConfig(args)]);
@@ -128,7 +128,7 @@ const DesignConfigurator = ({
       const blob = base64ToBlob(base64Data, "image/png");
       const file = new File([blob], "filename.png", { type: 'image/png' });
 
-      const x = await startUpload([file], { configId });
+      await startUpload([file], { configId });
     } catch (err) {
       toast({
         title: "Something went wrong",
@@ -229,6 +229,7 @@ const DesignConfigurator = ({
             <div className="relative mt-4 h-full flex flex-col justify-between">
               <div className="flex flex-col gap-6">
                 <RadioGroup
+                  disabled={isPending}
                   value={options.color}
                   onChange={(val) => {
                     setOptions((prev) => ({
@@ -260,7 +261,7 @@ const DesignConfigurator = ({
                 <div className="relative flex flex-col gap-3 w-full">
                   <Label> Model </Label>
                   <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
+                    <DropdownMenuTrigger disabled={isPending} asChild>
                       <Button
                         variant="outline"
                         role="combobox"
@@ -297,6 +298,7 @@ const DesignConfigurator = ({
 
                 {[MATERIALS, FINISHES].map(({ name, options: selectableOptions }) => (
                   <RadioGroup
+                    disabled={isPending}
                     key={name}
                     value={options[name]}
                     onChange={(val) => {
@@ -366,13 +368,19 @@ const DesignConfigurator = ({
               <p className="font-medium whitespace-nowrap">
                 {formatPrice((BASE_PRICE + options.finish.price + options.material.price) / 100)}
               </p>
-              <Button size="sm" className="w-full" onClick={() => saveConfig({
-                configId,
-                color: options.color.value,
-                finish: options.finish.value,
-                material: options.material.value,
-                model: options.model.value,
-              })}>
+              <Button
+                isLoading={isPending}
+                disabled={isPending}
+                loadingText="Saving"
+                size="sm"
+                className="w-full"
+                onClick={() => saveConfig({
+                  configId,
+                  color: options.color.value,
+                  finish: options.finish.value,
+                  material: options.material.value,
+                  model: options.model.value,
+                })}>
                 Continue
                 <ArrowRight className="h-4 w-4 ml-1.5 inline" />
               </Button>
