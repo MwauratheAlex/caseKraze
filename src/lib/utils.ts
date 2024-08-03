@@ -42,5 +42,6 @@ export function constructMetadata({
       creator: "@MwauraMbugua_"
     },
     icons,
+    metadataBase: new URL("https://case.mbumwa.com"),
   };
 }
