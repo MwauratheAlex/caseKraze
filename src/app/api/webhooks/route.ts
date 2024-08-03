@@ -1,4 +1,3 @@
-'use server'
 import { db } from "@/db";
 import { stripe } from "@/lib/stripe";
 import { headers } from "next/headers";
