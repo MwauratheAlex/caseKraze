@@ -27,7 +27,7 @@ const Page = () => {
       localStorage.removeItem('configurationId');
       router.push(`/configure/preview?id=${configId}`);
     } else {
-      router.push('/');
+      router.push(process.env.NEXT_PUBLIC_SERVER_URL as string);
     }
   }
 
