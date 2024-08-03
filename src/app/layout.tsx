@@ -5,13 +5,11 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
 import Providers from "@/components/Providers";
+import { constructMetadata } from "@/lib/utils";
 
 const recursive = Recursive({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "CaseKraze",
-  description: "Capture your favourite memories with your phone, one-of-one phone case. CaseCobra allows you to protect your memories, not just your phone case.",
-};
+export const metadata: Metadata = constructMetadata();
 
 export default function RootLayout({
   children,
